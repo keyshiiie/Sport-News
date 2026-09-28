@@ -1,0 +1,123 @@
+/* === SITE HEADER === */
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #fff;
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
+    transition: padding 0.3s, box-shadow 0.3s;
+}
+
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+/* === LOGO === */
+.logo-icon {
+    max-height: 42px;
+    width: auto;
+}
+
+
+/* === NAVIGATION === */
+.main-navigation {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu li a {
+    font-size: 16px;
+    font-weight: 400;
+    color: #26262699;
+    transition: color 0.3s;
+    position: relative;
+    padding-bottom: 4px;
+}
+
+.nav-menu li a:hover {
+    color: #262626;
+}
+
+.nav-menu li a:active {
+    color: #262626;
+}
+
+.nav-menu li a.is-active {
+    color: #262626;
+    font-weight: 500;
+}
+
+.nav-menu li a.is-active::after {
+    width: 100%;
+}
+
+/* === SEARCH === */
+.header-search {
+    flex-shrink: 0;
+}
+
+.search-button {
+    border-radius: 6px;
+    background: #B8C2CE;
+    cursor: pointer;
+    padding: 10px 15px;
+    display: flex;
+    gap: 10px;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+}
+
+.search-button span{
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.search-button:hover {
+    transform: scale(1.1);
+    background: #7995b7;
+}
+
+/* === АДАПТИВ === */
+@media (max-width: 900px) {
+    .nav-menu {
+        gap: 15px;
+    }
+    .nav-menu li a {
+        font-size: 13px;
+    }
+    .search-field {
+        width: 100px;
+    }
+}
+
+@media (max-width: 700px) {
+    .header-inner {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+    .main-navigation {
+        order: 3;
+        flex-basis: 100%;
+        justify-content: flex-start;
+    }
+    .nav-menu {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+}

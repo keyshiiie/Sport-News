@@ -1,0 +1,24 @@
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor files
+.vscode/
+.idea/
+*.sublime-*
+
+# Логи и временные
+*.log
+*.tmp
+*.bak
+
+# Node modules (если будете использовать сборку)
+node_modules/
+
+# WordPress core (на случай, если кто-то положит тему в корень WP)
+/wp-admin/
+/wp-includes/
+/wp-content/uploads/
+/wp-content/plugins/
+wp-config.php
